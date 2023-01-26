@@ -10,6 +10,7 @@ export const Menu = styled.div`
 display: flex;
 background-color: #000000;
 width: 100px;
+flex-direction: column;
 `;
 
 export const PageBody = styled.div`
