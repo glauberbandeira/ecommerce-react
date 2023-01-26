@@ -8,6 +8,8 @@ background-color: #EEEEEE;
 
 export const Menu = styled.div`
 display: flex;
+justify-content: center;
+align-items: center;
 background-color: #000000;
 width: 100px;
 flex-direction: column;
