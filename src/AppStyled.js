@@ -17,6 +17,7 @@ flex-direction: column;
 
 export const PageBody = styled.div`
 display: flex;
-background-color: #EFEFEF;
+background-color: #AFAFAF;
+background-image: url('/assests/bg.png');
 flex: 1;
 `;
