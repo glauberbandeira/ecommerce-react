@@ -17,7 +17,7 @@ export const Logo = styled.img`
 export const SearchInput = styled.input`
     border: 0;
     border-radius: 25px;
-    width: ${props=>props.active ? 300 : 0};
+    width: ${props=>props.active ? 300 : 0}px;
     height: 50px;
     background-color: #fff;
     background-image: url("/assests/search.png");
@@ -26,4 +26,11 @@ export const SearchInput = styled.input`
     background-position: 10px center;
     outline: 0;
     padding-left: 50px;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    font-size: 15px;
+
+    &:focus {
+        cursor: text;
+    }
 `;
