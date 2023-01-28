@@ -10,7 +10,9 @@ import CategoryItem from '../../components/CategoryItem';
 export default () => {
     const history = useHistory();
     const [headerSearch, setHeaderSearch] = useState('');
-    const [categories, setCategories] = useState([])
+    const [categories, setCategories] = useState([]);
+
+    const [activeCategory, setActiveCategory] = useState('');
 
     useEffect(()=> {
         const getCategories = async () => {
@@ -30,8 +32,21 @@ export default () => {
                 <CategoryArea>
                     Selecione um categoria
                     <CategoryList>
-                        <CategoryItem title="Todas as categorias" image="food-and-restaurant.png" />
-
+                        <CategoryItem 
+                            data={{
+                                id:'', 
+                                title:'Todas as categorias', 
+                                image:'/assests/food-and-restaurant.png'
+                            }}
+                            activeCategory={activeCategory}
+                        />
+                        {categories.map((item, index)=>(
+                            <CategoryItem 
+                                key={index} 
+                                data={item}
+                                activeCategory={activeCategory}
+                            />
+                        ))}
                     </CategoryList>
                 </CategoryArea>
             }
