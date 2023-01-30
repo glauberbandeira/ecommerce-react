@@ -20,4 +20,5 @@ display: flex;
 background-color: #AFAFAF;
 background-image: url('/assests/bg.png');
 flex: 1;
+overflow-y: auto;
 `;
