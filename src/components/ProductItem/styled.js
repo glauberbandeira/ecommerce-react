@@ -7,6 +7,7 @@ export const Container = styled.div`
     padding: 10px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 `;
 
 export const ProductPhotoArea = styled.div`

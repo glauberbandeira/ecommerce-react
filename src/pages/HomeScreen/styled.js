@@ -16,11 +16,12 @@ export const CategoryList = styled.div`
 `;
 
 export const ProductArea = styled.div`
-    display: flex;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 `;
 
 export const ProductList = styled.div`
-    display: flex;
-    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 `;
