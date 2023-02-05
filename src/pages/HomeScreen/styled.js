@@ -21,7 +21,15 @@ export const ProductArea = styled.div`
 `;
 
 export const ProductList = styled.div`
-    display: grid;
+    display: gird;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+`;
+
+export const ProductPaginationArea = styled.div`
+
+`;
+
+export const ProductPaginationItem = styled.div`
+
 `;
