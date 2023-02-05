@@ -21,7 +21,7 @@ export const ProductArea = styled.div`
 `;
 
 export const ProductList = styled.div`
-    display: gird;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 `;

@@ -15,6 +15,8 @@ import Header from '../../components/Header';
 import CategoryItem from '../../components/CategoryItem';
 import ProductItem from '../../components/ProductItem';
 
+let searchTimer = null;
+
 export default () => {
     const history = useHistory();
     const [headerSearch, setHeaderSearch] = useState('');
@@ -24,6 +26,7 @@ export default () => {
 
     const [activeCategory, setActiveCategory] = useState(0);
     const [activePage, setActivePage] = useState(0);
+    const [activeSearch, setActiveSearch] = useState('');
 
     const getProducts = async () => {
         const prods = await api.getProducts()
@@ -47,7 +50,14 @@ export default () => {
     useEffect(() => {
         setProducts([])
         getProducts();
-    }, [activeCategory, activePage]);
+    }, [activeCategory, activePage, activeSearch]);
+
+    useEffect(() => {
+        clearTimeout(searchTimer)
+        searchTimer = setTimeout(() => {
+                setActiveSearch(headerSearch);
+        }, 2000);
+    }, [headerSearch]);
 
     return (
         <Container>
