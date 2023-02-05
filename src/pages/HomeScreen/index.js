@@ -45,8 +45,9 @@ export default () => {
     }, [])
 
     useEffect(() => {
+        setProducts([])
         getProducts();
-    }, [activeCategory]);
+    }, [activeCategory, activePage]);
 
     return (
         <Container>
@@ -92,8 +93,13 @@ export default () => {
 
             {totalPages > 0 && 
                 <ProductPaginationArea>
-                    {Array(totalPages).fill(0).map((item, index) =>(
-                        <ProductPaginationItem key={index}>
+                    {Array(activePage).fill(0).map((item, index) =>(
+                        <ProductPaginationItem 
+                            key={index} 
+                            active={activePage}
+                            current={index + 1}
+                            onClick={()=>setActivePage(index+1)}
+                        >
                             {index + 1}
                         </ProductPaginationItem>
                     ))}
