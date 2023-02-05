@@ -7,9 +7,22 @@ export default {
         const json = await res.json();
         return json;
     },
-    getProducts: async () => {
+    getProducts: async (category, page, search) => {
        // GEt /products ([search, page, category])
-       const res = await fetch(BASE+'/products');
+       let fields = {};
+       if(category !== 0) {
+        fields.category = category;
+       }
+       if(page > 0) {
+        fields.page = page;
+       }
+       if(search !== 0) {
+        fields.search = search
+       }
+       let queryString = new URLSearchParams(fields).toString();
+
+
+       const res = await fetch(BASE+'/products?'+queryString);
        const json = await res.json();
        return json;
     }
