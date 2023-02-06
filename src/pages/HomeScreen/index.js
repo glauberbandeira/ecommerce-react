@@ -119,8 +119,12 @@ export default () => {
                 </ProductPaginationArea>
             }
 
-            <Modal status={modalStatus}>
+            <Modal status={modalStatus} setStatus={setModalStatus}>
                 Conteúdo do Modal
+                <div style={{backgroundColor: '#ff0000', width: 600, height: 400}}>
+                
+                </div>
+                Fim do conteúdo
             </Modal>
         </Container>
     );
