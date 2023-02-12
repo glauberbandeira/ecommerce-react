@@ -6,8 +6,7 @@ export const Container = styled.div`
 `;
 
 export const ProductArea = styled.div`
-    height: 100px;
-    background-color: #ff0000;
+    height: 200px;
     display: flex;
     `; 
 
@@ -21,11 +20,15 @@ export const ProductPhoto = styled.img`
 `;
 export const ProductInfoArea = styled.div`
     flex: 1;
-    background-color: #0000ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `;
 export const ProductDetails = styled.div`
-
+    height: 50px;
+    background-color: #ff0000;
 `;
 export const ProductQuantityArea = styled.div`
-
+    height: 50px;
+    background-color: blue;
 `;

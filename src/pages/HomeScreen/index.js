@@ -26,7 +26,9 @@ export default () => {
     const [products, setProducts] = useState([]);
     const [totalPages, setTotalPages] = useState(0);
 
-    const [modalStatus, setModalStatus] = useState(true)
+    const [modalStatus, setModalStatus] = useState(false);
+    const [modalData, setModalData] = useState({});
+
 
     const [activeCategory, setActiveCategory] = useState(0);
     const [activePage, setActivePage] = useState(1);
@@ -62,6 +64,11 @@ export default () => {
                 setActiveSearch(headerSearch);
         }, 2000);
     }, [headerSearch]);
+
+    const handleProductClick = (data) => {
+        setModalData(data);
+        setModalStatus(true);
+    }
 
     return (
         <Container>
@@ -99,6 +106,7 @@ export default () => {
                             <ProductItem
                                 key={index}
                                 data={item}
+                                onClick={handleProductClick}
                             />
                         ))}
                     </ProductList>
@@ -121,7 +129,7 @@ export default () => {
             }
 
             <Modal status={modalStatus} setStatus={setModalStatus}>
-                <ModalProduct />
+                <ModalProduct data={modalData} />
             </Modal>
         </Container>
     );

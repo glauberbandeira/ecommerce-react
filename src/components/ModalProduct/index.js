@@ -11,17 +11,17 @@ import {
 
 } from "./styled";
 
-export default () => {
+export default ({ data }) => {
     return (
         <Container>
             <ProductArea>
-                <ProductPhoto src="" />
+                <ProductPhoto src={data.image} />
                 <ProductInfoArea>
                     <ProductDetails>
-
+                        {data.name}
                     </ProductDetails>
                     <ProductQuantityArea>
-
+                        ,,,
                     </ProductQuantityArea>
                 </ProductInfoArea>
             </ProductArea>
