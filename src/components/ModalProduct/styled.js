@@ -11,24 +11,47 @@ export const ProductArea = styled.div`
     `; 
 
 export const ProductButtons = styled.div`
-    height: 50px;
-    background-color: #00ff00;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
 `;
 
 export const ProductPhoto = styled.img`
-    width: 301px;
+    width: 310px;
+    border-radius: 10px;
 `;
 export const ProductInfoArea = styled.div`
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: 10px;
 `;
 export const ProductDetails = styled.div`
-    height: 50px;
-    background-color: #ff0000;
+
 `;
 export const ProductQuantityArea = styled.div`
     height: 50px;
     background-color: blue;
+`;
+
+export const ProductName = styled.div`
+    font-size: 30px;
+    font-size: bold;
+`;
+
+export const ProductIngredients = styled.div`
+    font-size: 14px;
+`;
+
+export const ProductButton = styled.button`
+    border: 0;
+    background-color: #073C07;
+    box-shadow: 4px 5px 0px #999;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
 `;
