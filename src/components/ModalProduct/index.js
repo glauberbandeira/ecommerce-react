@@ -37,6 +37,12 @@ export default ({ data, setStatus }) => {
             setQt(qt + 1)
     }
 
+    const handleAddToCart = () => {
+        // juntar informaçoes, mandar para o reducer e fechar o modal(ok)
+
+        setStatus(false)
+    }
+
     return (
         <Container>
             <ProductArea>
@@ -61,7 +67,7 @@ export default ({ data, setStatus }) => {
 
             <ProductButtons>
                 <ProductButton small={true} onClick={handleCancelButton}>Cancelar</ProductButton>
-                <ProductButton>Adicionar ao carrinho</ProductButton>
+                <ProductButton onClick={handleAddToCart}>Adicionar ao carrinho</ProductButton>
             </ProductButtons>
         </Container>
     )
