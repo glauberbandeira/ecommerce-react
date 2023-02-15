@@ -25,9 +25,13 @@ export const CartIcon = styled.img`
 `;
 
 export const CartText = styled.div`
+    flex: 1;
     color: #fff;
     font-size: 1.125rem;
     font-weight: bold;
 `;
 
-export const CartBody = styled.div``;
+export const CartBody = styled.div`
+    display: ${props=>props.show ? 'flex' : 'none'};
+
+`;
