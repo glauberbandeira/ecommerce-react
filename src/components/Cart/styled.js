@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CartArea = styled.div`
-    background-color: #000000;
+    background-color: #0B670B;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     position: fixed;
