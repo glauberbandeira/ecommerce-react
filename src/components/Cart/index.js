@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import { CartArea,
          CartHeader,
@@ -18,6 +18,7 @@ import { CartArea,
 } from './styled';
 
 export default () => {
+    const dispatch = useDispatch();
     const products = useSelector(state => state.cart.products);
 
     const [show, setShow] = useState(true);
@@ -27,7 +28,10 @@ export default () => {
     }
 
     const handleProductChange = (key, type) => {
-        alert(key+" ="+type);
+        dispatch({
+            type: 'CHANGE_PRODUCT',
+            payload:{key, type}
+        });
     }
 
 
