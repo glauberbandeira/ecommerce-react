@@ -66,5 +66,21 @@ export const ProductPrice = styled.div`
 `;
 
 export const ProductQuantityArea = styled.div`
-
+    display: flex;
+    align-items: center;
 `;
+
+export const ProductQtIcon = styled.img`
+    width: 13px;
+    height: auto;
+    cursor: pointer;
+`;
+
+export const ProductQtText = styled.div`
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0px 5px;
+`;
+
+
+
